@@ -5,13 +5,13 @@ import styles from './About.module.css';
 
 const About = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section className={styles.aboutSection} id="About">
       <div className={styles.container}>
         {/* Left Side collage and cards */}
         <div className={styles.collageGrid}>
           {/* Top Row: Spanning Image */}
           <img
-            src="/about_1.png"
+            src="/Classroom1.jpg"
             alt="Students collaborating"
             className={styles.imageTop}
           />
@@ -25,7 +25,7 @@ const About = () => {
 
           {/* Row 2: Right Image */}
           <img
-            src="/about_2.png"
+            src="/Classroom2.jpg"
             alt="Students studying"
             className={styles.imageBottom}
           />
@@ -79,7 +79,7 @@ const About = () => {
 
           <div className={styles.principalRow}>
             <img
-              src="/avatar_moris.png"
+              src="/principle.jpg"
               alt="Moris S. Barbar"
               className={styles.avatar}
             />

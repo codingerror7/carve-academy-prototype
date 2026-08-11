@@ -1,10 +1,10 @@
 .aboutSection {
-  background-color: #fcfbf7;
+  background-color: var(--color-bg-cream);
   padding: 100px 24px;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -24,13 +24,14 @@
   width: 100%;
   height: 280px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(7, 46, 39, 0.05);
 }
 
 /* Lime Green Stat Card */
 .statCard {
-  background-color: #b3f55c;
-  border-radius: 20px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-lg);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -38,24 +39,25 @@
   align-items: center;
   text-align: center;
   gap: 12px;
+  box-shadow: var(--shadow-sm);
 }
 
 .checkIcon {
   font-size: 24px;
-  color: #072e27;
+  color: var(--color-primary);
 }
 
 .statNumber {
   font-size: 32px;
   font-weight: 800;
-  color: #072e27;
+  color: var(--color-primary);
   line-height: 1;
 }
 
 .statLabel {
   font-size: 13px;
   font-weight: 600;
-  color: #072e27;
+  color: var(--color-primary);
   line-height: 1.4;
 }
 
@@ -63,17 +65,19 @@
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(7, 46, 39, 0.05);
 }
 
 /* Beige Rating Card */
 .ratingCard {
-  background-color: #f6f5ee;
-  border-radius: 20px;
+  background-color: var(--color-bg-beige);
+  border-radius: var(--radius-lg);
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  box-shadow: var(--shadow-sm);
 }
 
 .ratingStars {
@@ -85,36 +89,37 @@
 .ratingNum {
   font-size: 36px;
   font-weight: 800;
-  color: #072e27;
+  color: var(--color-primary);
   line-height: 1;
 }
 
 .ratingScale {
   font-size: 16px;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--color-text-muted);
 }
 
 .ratingLabel {
   font-size: 13px;
   font-weight: 500;
-  color: #4b5563;
+  color: var(--color-text-muted);
 }
 
 /* Beige Skills Card */
 .skillsCard {
-  background-color: #f6f5ee;
-  border-radius: 20px;
+  background-color: var(--color-bg-beige);
+  border-radius: var(--radius-lg);
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  box-shadow: var(--shadow-sm);
 }
 
 .skillsTitle {
   font-size: 16px;
   font-weight: 700;
-  color: #072e27;
+  color: var(--color-primary);
   margin: 0;
 }
 
@@ -125,14 +130,15 @@
 }
 
 .tag {
-  background-color: #ffffff;
-  color: #072e27;
+  background-color: var(--color-white);
+  color: var(--color-primary);
   font-size: 11px;
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  border: 1px solid rgba(7, 46, 39, 0.05);
 }
 
 /* Right Side Content */
@@ -150,12 +156,12 @@
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #072e27;
+  color: var(--color-primary);
   letter-spacing: 1px;
 }
 
 .asterisk {
-  color: #072e27;
+  color: var(--color-primary);
   font-size: 16px;
 }
 
@@ -163,7 +169,7 @@
   font-size: 44px;
   font-weight: 800;
   line-height: 1.15;
-  color: #072e27;
+  color: var(--color-primary);
   margin: 0;
   letter-spacing: -0.5px;
 }
@@ -171,7 +177,7 @@
 .description {
   font-size: 15px;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -180,27 +186,27 @@
   align-items: center;
   gap: 12px;
   background-color: transparent;
-  color: #072e27;
+  color: var(--color-primary);
   border: 1px solid rgba(7, 46, 39, 0.2);
   padding: 6px 6px 6px 20px;
-  border-radius: 9999px;
+  border-radius: var(--radius-xl);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-normal);
   text-decoration: none;
 }
 
 .moreAboutBtn:hover {
   background-color: rgba(7, 46, 39, 0.03);
-  border-color: #072e27;
+  border-color: var(--color-primary);
 }
 
 .btnArrow {
   width: 32px;
   height: 32px;
-  background-color: #b3f55c;
-  color: #072e27;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -225,6 +231,7 @@
   height: 54px;
   border-radius: 50%;
   object-fit: cover;
+  border: 1px solid rgba(7, 46, 39, 0.08);
 }
 
 .principalMeta {
@@ -235,22 +242,51 @@
 .principalName {
   font-size: 16px;
   font-weight: 700;
-  color: #072e27;
+  color: var(--color-primary);
 }
 
 .principalTitle {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--color-text-muted);
 }
 
 /* Responsiveness */
 @media (max-width: 1024px) {
+  .aboutSection {
+    padding: 80px 16px;
+  }
+
   .container {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+
+  .contentRight {
+    align-items: center;
+    text-align: center;
+  }
+
+  .prefix {
+    justify-content: center;
+  }
+
   .title {
     font-size: 36px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .moreAboutBtn {
+    margin: 0 auto;
+  }
+
+  .principalRow {
+    justify-content: center;
+    text-align: left;
   }
 }
 
@@ -258,13 +294,16 @@
   .collageGrid {
     grid-template-columns: 1fr;
   }
+
   .imageTop {
     grid-column: span 1;
     height: 200px;
   }
+
   .statCard {
     padding: 24px;
   }
+
   .imageBottom {
     height: 160px;
   }

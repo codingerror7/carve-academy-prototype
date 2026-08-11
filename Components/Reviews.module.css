@@ -1,0 +1,233 @@
+.reviewsSection {
+  background-color: var(--color-bg-cream);
+  padding: 100px 24px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.sectionHeader {
+  margin-bottom: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.prefix {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.asterisk {
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.sectionTitle {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.sectionDesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 580px;
+  margin: 0;
+}
+
+/* Swiper Marquee Layout */
+.swiperContainer {
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 24px 0;
+}
+
+/* Vignette fade effect on sides */
+.swiperContainer::before,
+.swiperContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.swiperContainer::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--color-bg-cream) 0%, rgba(252, 251, 247, 0) 100%);
+}
+
+.swiperContainer::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--color-bg-cream) 0%, rgba(252, 251, 247, 0) 100%);
+}
+
+.swiperTrack {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollContinuous 25s linear infinite;
+  padding: 0 40px;
+}
+
+.swiperTrack:hover {
+  animation-play-state: paused;
+}
+
+/* Card Styling */
+.reviewCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  border: 1px solid rgba(7, 46, 39, 0.05);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 380px;
+  flex-shrink: 0;
+  transition: var(--transition-normal);
+}
+
+.reviewCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(7, 46, 39, 0.1);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  color: #eab308;
+  font-size: 15px;
+}
+
+.quote {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+.profileBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+  border-top: 1px solid rgba(7, 46, 39, 0.06);
+  padding-top: 20px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-bg-beige);
+  border: 1px solid rgba(7, 46, 39, 0.05);
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.authorName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.authorRole {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Section statistics */
+.statsRow {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 64px;
+  border-top: 1px solid rgba(7, 46, 39, 0.08);
+  padding-top: 48px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Continuous scrolling keyframes */
+@keyframes scrollContinuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .reviewsSection {
+    padding: 80px 16px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+  .statsRow {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .reviewCard {
+    width: 320px;
+    padding: 28px;
+  }
+}

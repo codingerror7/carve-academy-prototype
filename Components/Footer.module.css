@@ -1,12 +1,12 @@
 .footer {
-  background-color: #072e27;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 80px 24px 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@
 .logoIcon {
   width: 28px;
   height: 28px;
-  background-color: #b3f55c;
+  background-color: var(--color-accent);
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -44,13 +44,13 @@
 .logoIconInner {
   width: 14px;
   height: 14px;
-  border: 2px solid #072e27;
+  border: 2px solid var(--color-primary);
   border-radius: 50%;
   border-top-color: transparent;
 }
 
 .logoText {
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -73,25 +73,25 @@
   width: 36px;
   height: 36px;
   background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  color: var(--color-white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: var(--transition-normal);
   text-decoration: none;
 }
 
 .socialIcon:hover {
-  background-color: #b3f55c;
-  color: #072e27;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
   transform: translateY(-2px);
 }
 
 .title {
   font-size: 18px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-white);
   margin: 0 0 20px 0;
   position: relative;
 }
@@ -113,7 +113,7 @@
 }
 
 .linkItem a:hover {
-  color: #b3f55c;
+  color: var(--color-accent);
   padding-left: 4px;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .contactIcon {
-  color: #b3f55c;
+  color: var(--color-accent);
   font-size: 18px;
   margin-top: 2px;
 }
@@ -166,15 +166,18 @@
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: var(--transition-fast);
 }
 
 .bottomLinks a:hover {
-  color: #b3f55c;
+  color: var(--color-accent);
 }
 
 /* Responsiveness */
 @media (max-width: 1024px) {
+  .footer {
+    padding: 60px 16px 20px;
+  }
   .grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
